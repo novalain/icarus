@@ -23,6 +23,11 @@ public class PlayerCollisions : MonoBehaviour
     }
   }
 
+    void HandleBlackHoleCollision(Collision collision)
+    {
+        Destroy(gameObject);
+    }
+
   void OnCollisionEnter(Collision collision)
   {
     switch (collision.gameObject.tag.ToString())
@@ -32,6 +37,7 @@ public class PlayerCollisions : MonoBehaviour
         break;
       case "Blackhole":
         Debug.Log("Player collided with THE BLACK HOLE AAAAAAAH!");
+        HandleBlackHoleCollision(collision);
         break;
       case "Asteroid":
         Debug.Log(gameObject.name + " collided with an asteroid!");
