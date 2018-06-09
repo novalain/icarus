@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4598044241015578}
   - component: {fileID: 114214012923050904}
+  - component: {fileID: 114210284121596926}
+  - component: {fileID: 114360768359426560}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -40,6 +42,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114210284121596926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1874450311751732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ade3628ad604ba69eeda2c58a3b47a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114214012923050904
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -51,4 +64,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e24238930c71841a80eebf289660fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PhysicsObjects: []
+  PhysicsObjects:
+  - {fileID: 0}
+--- !u!114 &114360768359426560
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1874450311751732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407be5a0691499f4da2ac58351233a58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
