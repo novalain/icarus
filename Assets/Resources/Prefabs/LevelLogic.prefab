@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4462327552249666}
   - component: {fileID: 114031075778494016}
   - component: {fileID: 114491249691599522}
+  - component: {fileID: 114121847931363250}
   m_Layer: 0
   m_Name: LevelLogic
   m_TagString: Untagged
@@ -59,6 +60,17 @@ MonoBehaviour:
   InitialSpreadAngle: 90
   MinStartVelocity: 0.1
   MaxStartVelocity: 5
+--- !u!114 &114121847931363250
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1461782163975516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51174648965919648a2c8d4bc8548677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114491249691599522
 MonoBehaviour:
   m_ObjectHideFlags: 1
