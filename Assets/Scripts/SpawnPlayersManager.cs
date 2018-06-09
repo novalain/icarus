@@ -13,10 +13,7 @@ public class SpawnPlayersManager : MonoBehaviour {
 			
 			// Set unique color and name
 			playerGameObject.name = "Player " + (i + 1);
-
-			Debug.Log(i);
-			Debug.Log(PLAYER_COLORS[i]);
-			
+					
 			PlayerMovement playerMovementComponent = playerGameObject.GetComponent<PlayerMovement>();
 			playerMovementComponent.playerType = (i + 1);
 			physicsObjectController.PhysicsObjects.Add(playerGameObject);
