@@ -11,12 +11,17 @@ public class Physics : MonoBehaviour {
     private Rigidbody _rigidbody;
 	// Use this for initialization
 	void Start () {
-
         _gameController = GameObject.Find("GameController");
         if (_gameController == null) Debug.LogError("Must have GameController with that name in the scene");
         _rigidbody = GetComponent<Rigidbody>();
         _physicsObjectController = _gameController.GetComponent<PhysicsObjectController>();
-        _rigidbody.velocity = initialVelocity;
+        //_rigidbody.velocity = initialVelocity;
+
+
+       // GameObject sun = GameObject.FindGameObjectWithTag("BlackHole");
+       // if (sun == null) Debug.LogError("sun object needs to have tag 'BlackHole'");
+       // float stableVelocity = GetStableOrbitVelocity(Vector3.Distance(sun.transform.position, transform.position), _rigidbody.mass, sun.GetComponent<Rigidbody>().mass);
+
 	}
 	
 	// Update is called once per frame
@@ -32,4 +37,8 @@ public class Physics : MonoBehaviour {
         }
 	}
 
+    public float GetStableOrbitVelocity(float distance, float mass1, float mass2)
+    {
+        return Mathf.Sqrt((mass1 + mass2 / distance));
+    }
 }
