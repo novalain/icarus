@@ -9,4 +9,9 @@ public class LoadSceneOnClick : MonoBehaviour {
   {
     SceneManager.LoadScene(sceneIndex);
   }
+
+    public void LoadByName(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
 }

@@ -15,7 +15,7 @@ public class NumberOfPlayersPicker : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        GlobalData.numPlayers = numberOfPlayers;
 	}
 
     public void RemovePlayer()
