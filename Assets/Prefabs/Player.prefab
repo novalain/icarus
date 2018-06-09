@@ -27,9 +27,10 @@ GameObject:
   - component: {fileID: 114175502146860018}
   - component: {fileID: 96982968951019798}
   - component: {fileID: 114012956481577862}
+  - component: {fileID: 114941053578747632}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -227,7 +228,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded55c1e512da6047935e1fc19fa454c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
   initialVelocity: {x: -11, y: 0, z: 0}
 --- !u!114 &114451104897740350
 MonoBehaviour:
@@ -242,6 +242,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mass: 1
   radius: 1
+--- !u!114 &114941053578747632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1659207029883276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c6cb2aa952559744a4cc801a71c5aef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135406959903585370
 SphereCollider:
   m_ObjectHideFlags: 1
