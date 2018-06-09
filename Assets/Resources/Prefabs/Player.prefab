@@ -216,6 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
+  playerType: 2
 --- !u!114 &114175502146860018
 MonoBehaviour:
   m_ObjectHideFlags: 1

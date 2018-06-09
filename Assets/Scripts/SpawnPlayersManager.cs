@@ -7,10 +7,12 @@ public class SpawnPlayersManager : MonoBehaviour {
 	void Start () {
 		PhysicsObjectController physicsObjectController = GetComponent<PhysicsObjectController>();
 		for (int i = 0; i < GlobalData.numPlayers; ++i) {
-			GameObject player = (GameObject)Resources.Load("Prefabs/Player", typeof(GameObject));
-			player.name = "Player " + i;
-			physicsObjectController.PhysicsObjects.Add(player);
-			Instantiate(player, new Vector3((i + 1) * 5, 0, 0), Quaternion.identity);
+			GameObject playerGameObject = (GameObject)Resources.Load("Prefabs/Player", typeof(GameObject));
+			playerGameObject.name = "Player " + (i + 1);
+			PlayerMovement playerMovementComponent = playerGameObject.GetComponent<PlayerMovement>();
+			playerMovementComponent.playerType = (i + 1);
+			physicsObjectController.PhysicsObjects.Add(playerGameObject);
+			Instantiate(playerGameObject, new Vector3((i + 1) * 5, 0, 0), Quaternion.identity);
 		}
 	}
 	

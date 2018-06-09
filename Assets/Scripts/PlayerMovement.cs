@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-enum CurrentPlayer { Player1, Player2, Player3, Player4 }
-
 public class PlayerMovement : MonoBehaviour {
-	public float speed;
-	
+	public float speed = 0;
+	public int playerType = 0;
+
 	private Rigidbody _rigidBody;	
 
 	// Use this for initialization
@@ -15,8 +14,8 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		float moveHorizontal = Input.GetAxis("Horizontal_p1");
-        float moveVertical = Input.GetAxis("Vertical_p1");
+		float moveHorizontal = Input.GetAxis("Horizontal_p" + playerType);
+        float moveVertical = Input.GetAxis("Vertical_p" + playerType);
 		Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 		_rigidBody.AddForce (movement * speed);
 	}
