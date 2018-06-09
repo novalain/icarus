@@ -23,13 +23,12 @@ GameObject:
   - component: {fileID: 23615369042053682}
   - component: {fileID: 135406959903585370}
   - component: {fileID: 54441928108965114}
-  - component: {fileID: 114451104897740350}
   - component: {fileID: 114175502146860018}
   - component: {fileID: 96982968951019798}
   - component: {fileID: 114012956481577862}
   - component: {fileID: 114941053578747632}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player 1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -229,19 +228,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialVelocity: {x: -11, y: 0, z: 0}
---- !u!114 &114451104897740350
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1659207029883276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d43ad8907dc8e924c80271a37d3b5eff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mass: 1
-  radius: 1
 --- !u!114 &114941053578747632
 MonoBehaviour:
   m_ObjectHideFlags: 1
