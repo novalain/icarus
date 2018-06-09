@@ -358,7 +358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 546868011}
-  initialVelocity: {x: -7, y: 0, z: 0}
+  initialVelocity: {x: -10, y: 0, z: 0}
 --- !u!1001 &1506478481
 Prefab:
   m_ObjectHideFlags: 0

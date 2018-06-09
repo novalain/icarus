@@ -20,7 +20,7 @@ public class Physics : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		foreach(GameObject planet in _physicsObjectController.PhysicsObjects)
         {
             if (GameObject.ReferenceEquals(gameObject, planet)) continue;
