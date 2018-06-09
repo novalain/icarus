@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43ad8907dc8e924c80271a37d3b5eff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mass: 100
+  mass: 1000
   radius: 3
 --- !u!54 &805018284
 Rigidbody:
@@ -250,7 +250,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -263,7 +263,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4828933566620964, guid: e456800126771f945a8b926748f5fbd7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 4828933566620964, guid: e456800126771f945a8b926748f5fbd7, type: 2}
       propertyPath: m_LocalPosition.y
@@ -271,7 +271,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4828933566620964, guid: e456800126771f945a8b926748f5fbd7, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -7.16
       objectReference: {fileID: 0}
     - target: {fileID: 4828933566620964, guid: e456800126771f945a8b926748f5fbd7, type: 2}
       propertyPath: m_LocalRotation.x
@@ -358,6 +358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 546868011}
+  initialVelocity: {x: -7, y: 0, z: 0}
 --- !u!1001 &1506478481
 Prefab:
   m_ObjectHideFlags: 0
