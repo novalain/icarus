@@ -32,8 +32,4 @@ public class Physics : MonoBehaviour {
         }
 	}
 
-    public void AddForce(Vector3 force)
-    {
-
-    }
 }
