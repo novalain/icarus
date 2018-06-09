@@ -322,16 +322,6 @@ Prefab:
       propertyPath: controller
       value: 
       objectReference: {fileID: 546868011}
-    - target: {fileID: 114175502146860018, guid: e456800126771f945a8b926748f5fbd7,
-        type: 2}
-      propertyPath: initialVelocity.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114175502146860018, guid: e456800126771f945a8b926748f5fbd7,
-        type: 2}
-      propertyPath: initialVelocity.x
-      value: -11
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e456800126771f945a8b926748f5fbd7, type: 2}
   m_IsPrefabParent: 0
