@@ -18,17 +18,16 @@ public class SpawnPlayersManager : MonoBehaviour {
             // Spawn point data
             Transform spawnPoint = spawnPoints.transform.GetChild(i);          
             Vector3 initialVelocity = spawnPoint.GetComponent<SpawnPointData>().initalVelocity;
-
-            // Set unique color and name
-            playerGameObject.name = "Player " + (i + 1);
-					
+			
 			PlayerMovement playerMovementComponent = playerGameObject.GetComponent<PlayerMovement>();
 			playerMovementComponent.playerType = (i + 1);
 			physicsObjectController.PhysicsObjects.Add(playerGameObject);
 
-			GameObject go = Instantiate(playerGameObject, spawnPoint.transform.position, Quaternion.identity);	
-			go.GetComponent<MeshRenderer>().material.SetColor("_Color", PLAYER_COLORS[i]);
-            go.GetComponent<Rigidbody>().velocity = initialVelocity;
+			GameObject instanciatedGameObject = Instantiate(playerGameObject, new Vector3((i + 1) * 5, 0, 0), Quaternion.identity);	
+			// Set unique color and name
+			instanciatedGameObject.name = "Player " + (i + 1);
+			instanciatedGameObject.GetComponent<MeshRenderer>().material.SetColor("_Color", PLAYER_COLORS[i]);
+            instanciatedGameObject.GetComponent<Rigidbody>().velocity = initialVelocity;
 		}
 
         // Make the spawnpoints invisible
