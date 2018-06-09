@@ -31,6 +31,7 @@ public class InGameMenu : MonoBehaviour {
             }
             else
             {
+
                 _menuPanel.SetActive(true);
                 _menuActive = true;
                 Time.timeScale = 0;
