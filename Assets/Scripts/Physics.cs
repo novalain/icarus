@@ -4,18 +4,21 @@ using UnityEngine;
 
 [RequireComponent(typeof(PhysicsData))]
 public class Physics : MonoBehaviour {
-    public GameObject controller;
+   
     public Vector3 initialVelocity;
 
-
+    private GameObject _gameController;
     private PhysicsObjectController  _physicsObjectController;
     private Rigidbody _rigidbody;
     private PhysicsData _physicsData;
 	// Use this for initialization
 	void Start () {
+
+        _gameController = GameObject.Find("GameController");
+        if (_gameController == null) Debug.LogError("Must have GameController with that name in the scene");
         _physicsData = GetComponent<PhysicsData>();
         _rigidbody = GetComponent<Rigidbody>();
-        _physicsObjectController = controller.GetComponent<PhysicsObjectController>();
+        _physicsObjectController = _gameController.GetComponent<PhysicsObjectController>();
         _rigidbody.velocity = initialVelocity;
 	}
 	
