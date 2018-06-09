@@ -182,11 +182,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114214012923050904, guid: 4f3323e279893d24f8409c829beda47c,
-        type: 2}
-      propertyPath: PhysicsObjects.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4598044241015578, guid: 4f3323e279893d24f8409c829beda47c, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0.23403168
@@ -227,33 +222,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f3323e279893d24f8409c829beda47c, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &215914164 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1874450311751732, guid: 4f3323e279893d24f8409c829beda47c,
-    type: 2}
-  m_PrefabInternal: {fileID: 215914163}
---- !u!114 &215914165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 215914164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82ade3628ad604ba69eeda2c58a3b47a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &215914166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 215914164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407be5a0691499f4da2ac58351233a58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &588650362
 GameObject:
   m_ObjectHideFlags: 0
