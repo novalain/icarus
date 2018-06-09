@@ -23,7 +23,7 @@ public class SpawnPlayersManager : MonoBehaviour {
 			playerMovementComponent.playerType = (i + 1);
 			physicsObjectController.PhysicsObjects.Add(playerGameObject);
 
-			GameObject instanciatedGameObject = Instantiate(playerGameObject, new Vector3((i + 1) * 5, 0, 0), Quaternion.identity);	
+			GameObject instanciatedGameObject = Instantiate(playerGameObject, spawnPoint.position, Quaternion.identity);	
 			// Set unique color and name
 			instanciatedGameObject.name = "Player " + (i + 1);
 			instanciatedGameObject.GetComponent<MeshRenderer>().material.SetColor("_Color", PLAYER_COLORS[i]);
