@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Blackhole
   - StaticObstacle
+  - Asteroid
   layers:
   - Default
   - TransparentFX
