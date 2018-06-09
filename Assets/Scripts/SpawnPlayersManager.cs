@@ -11,15 +11,15 @@ public class SpawnPlayersManager : MonoBehaviour {
 		for (int i = 0; i < GlobalData.numPlayers; ++i) {
 			GameObject playerGameObject = (GameObject)Resources.Load("Prefabs/Player", typeof(GameObject));
 			
-			// Set unique color and name
-			playerGameObject.name = "Player " + (i + 1);
-					
+		
 			PlayerMovement playerMovementComponent = playerGameObject.GetComponent<PlayerMovement>();
 			playerMovementComponent.playerType = (i + 1);
 			physicsObjectController.PhysicsObjects.Add(playerGameObject);
 
-			GameObject go = Instantiate(playerGameObject, new Vector3((i + 1) * 5, 0, 0), Quaternion.identity);	
-			go.GetComponent<MeshRenderer>().material.SetColor("_Color", PLAYER_COLORS[i]);
+			GameObject instanciatedGameObject = Instantiate(playerGameObject, new Vector3((i + 1) * 5, 0, 0), Quaternion.identity);	
+			// Set unique color and name
+			instanciatedGameObject.name = "Player " + (i + 1);
+			instanciatedGameObject.GetComponent<MeshRenderer>().material.SetColor("_Color", PLAYER_COLORS[i]);
 		}
 	}
 	
