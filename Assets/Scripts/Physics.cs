@@ -5,14 +5,18 @@ using UnityEngine;
 public class Physics : MonoBehaviour {
    
     public Vector3 initialVelocity;
+    public float density = 1.0f;
 
     private GameObject _gameController;
     private PhysicsObjectController  _physicsObjectController;
     private Rigidbody _rigidbody;
+
 	// Use this for initialization
 	void Start () {
         _gameController = GameObject.Find("GameController");
+
         if (_gameController == null) Debug.LogError("Must have GameController with that name in the scene");
+
         _rigidbody = GetComponent<Rigidbody>();
         _physicsObjectController = _gameController.GetComponent<PhysicsObjectController>();
         //_rigidbody.velocity = initialVelocity;
@@ -26,11 +30,30 @@ public class Physics : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		foreach(GameObject planet in _physicsObjectController.PhysicsObjects)
+
+    // Math logic
+    //float mass = rho * volume;
+    //float volume = Mathf.Pow(radius, 3) * 4.0f / 3.0f * Mathf.PI;
+
+    //sun logic
+    //mass = 500
+    //radius = 3
+
+    //  500 /
+    //  (81 * 4 /3 *Pi)
+
+    float volume = _rigidbody.mass / density;
+
+    float radius = Mathf.Pow( volume * 3.0f / (4.0f * Mathf.PI), 1.0f / 3.0f);
+    transform.localScale = new Vector3(radius, radius, radius);
+
+    foreach (GameObject planet in _physicsObjectController.PhysicsObjects)
         {
             if (GameObject.ReferenceEquals(gameObject, planet)) continue;
             Rigidbody ohterRigidbody = planet.GetComponent<Rigidbody>();
 
+           
+          
             float force = _rigidbody.mass * ohterRigidbody.mass / Mathf.Pow(Vector3.Distance(transform.position, planet.transform.position), 2);
             Vector3 forceVec =  (planet.transform.position - transform.position).normalized * force;
             _rigidbody.AddForce(forceVec);
