@@ -12,6 +12,7 @@ public class LoadSceneOnClick : MonoBehaviour {
 
     public void LoadByName(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        GlobalData.gameScene = sceneName;
+        SceneManager.LoadScene("ControllerFindScene");
     }
 }
