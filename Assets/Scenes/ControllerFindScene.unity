@@ -753,6 +753,37 @@ Prefab:
       value: 
       objectReference: {fileID: 12800000, guid: 4d961a987e869a446a78d18bda09fb1e,
         type: 3}
+    - target: {fileID: 114508909826509780, guid: 126ec7ea336b83142bdeee16927a364f,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114508909826509780, guid: 126ec7ea336b83142bdeee16927a364f,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114508909826509780, guid: 126ec7ea336b83142bdeee16927a364f,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 114508909826509780, guid: 126ec7ea336b83142bdeee16927a364f,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.728
+      objectReference: {fileID: 0}
+    - target: {fileID: 114508909826509780, guid: 126ec7ea336b83142bdeee16927a364f,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 600bee74e2a6a914f992869a41495e04,
+        type: 3}
+    - target: {fileID: 114508909826509780, guid: 126ec7ea336b83142bdeee16927a364f,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 126ec7ea336b83142bdeee16927a364f, type: 2}
   m_IsPrefabParent: 0
