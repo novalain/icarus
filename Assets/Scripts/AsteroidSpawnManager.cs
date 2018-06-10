@@ -30,7 +30,7 @@ public class AsteroidSpawnManager : MonoBehaviour {
     float asteroidSize = Random.Range(MinRadius, MaxRadius);
     //newAsteroidObj.transform.localScale = new Vector3(asteroidSize, asteroidSize, asteroidSize);
     
-    newAsteroidObj.gameObject.GetComponent<Rigidbody>().mass = asteroidSize * MassCoefficient;
+    newAsteroidObj.gameObject.GetComponent<Rigidbody>().mass = asteroidSize;
 
     // initial speed and direction
     float directionSpread = (2*Random.value-1) * InitialSpreadAngle / 2;
