@@ -62,7 +62,7 @@ public class MainMenuController : MonoBehaviour {
         //play click sfx
         playClickSound();
 
-        //GlobalData.gameScene = "ControllerFindScene"
+        GlobalData.gameScene = "TestLevelJohan";
         SceneManager.LoadScene("ControllerFindScene");
 
         //enable BLUR
