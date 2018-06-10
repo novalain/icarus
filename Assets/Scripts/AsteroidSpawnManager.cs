@@ -9,8 +9,10 @@ public class AsteroidSpawnManager : MonoBehaviour {
   [Header("Spawn Parameters")]
   public float SpawnRadius = 30.0f;
   [Header("Geometric Attributes")]
-  public float MinRadius = 0.25f;
-  public float MaxRadius = 2.0f;
+  public float MinRadius = 0.2f;
+  public float MaxRadius = 1.0f;
+  [Header("Mass/Radius relationship")]
+  public float MassCoefficient = 0.5f;
   [Header("Initial Velocity Attributes")]
   public float InitialSpreadAngle = 90.0f;
   public float MinStartVelocity = 0.1f;
@@ -23,12 +25,12 @@ public class AsteroidSpawnManager : MonoBehaviour {
     Vector3 SpawnPosition = new Vector3(Mathf.Cos(spawnAngle)*SpawnRadius, 0, Mathf.Sin(spawnAngle)*SpawnRadius);
 
     GameObject newAsteroidObj = Instantiate(Asteroid, SpawnPosition, Quaternion.identity);
-
-    // Todo: add random mass
-
+    
     // Geometrical size
-    float AsteroidSize = Random.Range(MinRadius, MaxRadius);
-    newAsteroidObj.transform.localScale = new Vector3(AsteroidSize, AsteroidSize, AsteroidSize);
+    float asteroidSize = Random.Range(MinRadius, MaxRadius);
+    newAsteroidObj.transform.localScale = new Vector3(asteroidSize, asteroidSize, asteroidSize);
+    
+    newAsteroidObj.gameObject.GetComponent<Rigidbody>().mass = asteroidSize * MassCoefficient;
 
     // initial speed and direction
     float directionSpread = (2*Random.value-1) * InitialSpreadAngle / 2;
