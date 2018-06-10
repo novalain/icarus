@@ -23,6 +23,16 @@ public class SpawnPlayersManager : MonoBehaviour {
 			PlayerMovement playerMovementComponent = instanciatedGameObject.GetComponent<PlayerMovement>();
 			playerMovementComponent.playerType = (i + 1);
 			physicsObjectController.PhysicsObjects.Add(instanciatedGameObject);
+
+
+			// Decactivate the children we don't need for current player
+			int j = 0;
+			foreach (Transform child in instanciatedGameObject.transform) {
+				if (j != i) {
+					child.gameObject.SetActive(false);
+				}
+				++j;
+			}
 				
 			// Set unique color and name
 			instanciatedGameObject.name = "Player " + (i + 1);
