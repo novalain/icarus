@@ -43,8 +43,10 @@ public class GameBounds : MonoBehaviour {
 
             if (Mathf.Abs(pos.x) > maxX) maxX = Mathf.Abs(pos.x);
             if (Mathf.Abs(pos.z) > maxZ) maxZ = Mathf.Abs(pos.z);
+
+            if (Mathf.Max(Mathf.Abs(pos.x), Mathf.Abs(pos.z)) > playerMaxDistance) player.GetComponent<PlayerCollisions>().removeGameObjectFromScene(player);
         }
         float maxDist = Mathf.Max(maxX, maxZ);
-        _cam.orthographicSize = Mathf.Min( Mathf.Max( maxDist + maxDist/3, screenMinSize), screenMaxSize);
+        _cam.orthographicSize = Mathf.Lerp(_cam.orthographicSize, Mathf.Min( Mathf.Max( maxDist + maxDist/2, screenMinSize), screenMaxSize), 0.3f);
 	}
 }
