@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerCollisions : MonoBehaviour
 {
 
-  void removeGameObjectFromScene(GameObject gObject)
+  public void removeGameObjectFromScene(GameObject gObject)
   {
     GameObject physicsObjectController = GameObject.Find("GameController");
     physicsObjectController.GetComponent<PhysicsObjectController>().PhysicsObjects.Remove(gObject);
