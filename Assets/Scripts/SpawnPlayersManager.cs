@@ -13,17 +13,17 @@ public class SpawnPlayersManager : MonoBehaviour {
 
 		PhysicsObjectController physicsObjectController = GetComponent<PhysicsObjectController>();
 		for (int i = 0; i < GlobalData.numPlayers; ++i) {
-			GameObject playerGameObject = (GameObject)Resources.Load("Prefabs/Player", typeof(GameObject));
-
             // Spawn point data
             Transform spawnPoint = spawnPoints.transform.GetChild(i);          
             Vector3 initialVelocity = spawnPoint.GetComponent<SpawnPointData>().initalVelocity;
-			
-			PlayerMovement playerMovementComponent = playerGameObject.GetComponent<PlayerMovement>();
-			playerMovementComponent.playerType = (i + 1);
-			physicsObjectController.PhysicsObjects.Add(playerGameObject);
 
-			GameObject instanciatedGameObject = Instantiate(playerGameObject, spawnPoint.position, Quaternion.identity);	
+			GameObject playerGameObject = (GameObject)Resources.Load("Prefabs/Player", typeof(GameObject));
+			GameObject instanciatedGameObject = Instantiate(playerGameObject, spawnPoint.position, Quaternion.identity);
+			
+			PlayerMovement playerMovementComponent = instanciatedGameObject.GetComponent<PlayerMovement>();
+			playerMovementComponent.playerType = (i + 1);
+			physicsObjectController.PhysicsObjects.Add(instanciatedGameObject);
+				
 			// Set unique color and name
 			instanciatedGameObject.name = "Player " + (i + 1);
 			instanciatedGameObject.GetComponent<MeshRenderer>().material.SetColor("_Color", PLAYER_COLORS[i]);
