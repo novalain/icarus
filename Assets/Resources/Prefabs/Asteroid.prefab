@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 54562582831461036}
   - component: {fileID: 114747807707308144}
   - component: {fileID: 114284531803953650}
+  - component: {fileID: 114504278513355782}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Asteroid
@@ -114,6 +115,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialVelocity: {x: 0, y: 0, z: 0}
+--- !u!114 &114504278513355782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1458273446385914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aeaffcfb6f2320448e93e1c5de4b783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxVelocity: 10
 --- !u!114 &114747807707308144
 MonoBehaviour:
   m_ObjectHideFlags: 1
