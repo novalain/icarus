@@ -156,6 +156,10 @@ Prefab:
       propertyPath: m_TagString
       value: Blackhole
       objectReference: {fileID: 0}
+    - target: {fileID: 1458273446385914, guid: bb6ae4689fee4074e8f320a98d662eb6, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb6ae4689fee4074e8f320a98d662eb6, type: 2}
   m_IsPrefabParent: 0
