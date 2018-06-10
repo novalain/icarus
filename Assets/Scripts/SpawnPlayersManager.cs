@@ -51,6 +51,7 @@ public class SpawnPlayersManager : MonoBehaviour {
 			instanciatedGameObject.name = "Player " + (i + 1);
 			instanciatedGameObject.GetComponent<MeshRenderer>().material.SetColor("_Color", PLAYER_COLORS[i]);
             instanciatedGameObject.GetComponent<Rigidbody>().velocity = initialVelocity;
+            instanciatedGameObject.GetComponent<TrailRenderer>().material.SetColor("_Color", PLAYER_COLORS[i]);
 		}
 
         // Make the spawnpoints invisible
