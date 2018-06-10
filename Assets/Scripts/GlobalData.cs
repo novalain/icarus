@@ -4,5 +4,6 @@ using UnityEngine;
 
 // todo set this from main menu
 public static class GlobalData {
-	public static float numPlayers = 4; 
+	public static float numPlayers = 4;
+    public static string gameScene = "";
 }
