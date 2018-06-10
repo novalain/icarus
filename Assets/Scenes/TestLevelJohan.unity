@@ -331,21 +331,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 114031075778494016, guid: f4a4fa5d973fdfd4da05efdf27535d02,
-        type: 2}
-      propertyPath: MaxRadius
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114491249691599522, guid: f4a4fa5d973fdfd4da05efdf27535d02,
-        type: 2}
-      propertyPath: AsteroidSpawningDelay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114031075778494016, guid: f4a4fa5d973fdfd4da05efdf27535d02,
-        type: 2}
-      propertyPath: MinRadius
-      value: 15
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f4a4fa5d973fdfd4da05efdf27535d02, type: 2}
   m_IsPrefabParent: 0
@@ -508,25 +493,25 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114027910084772832, guid: ecc047b0b959fd44b989d23499e4e162,
+    - target: {fileID: 114478954020475786, guid: ecc047b0b959fd44b989d23499e4e162,
         type: 2}
-      propertyPath: initalVelocity.x
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 114987681991181930, guid: ecc047b0b959fd44b989d23499e4e162,
-        type: 2}
-      propertyPath: initalVelocity.x
-      value: -11
+      propertyPath: initalVelocity.z
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114153272956160890, guid: ecc047b0b959fd44b989d23499e4e162,
         type: 2}
       propertyPath: initalVelocity.z
-      value: -11
+      value: -7
       objectReference: {fileID: 0}
-    - target: {fileID: 114478954020475786, guid: ecc047b0b959fd44b989d23499e4e162,
+    - target: {fileID: 114987681991181930, guid: ecc047b0b959fd44b989d23499e4e162,
         type: 2}
-      propertyPath: initalVelocity.z
-      value: 11
+      propertyPath: initalVelocity.x
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114027910084772832, guid: ecc047b0b959fd44b989d23499e4e162,
+        type: 2}
+      propertyPath: initalVelocity.x
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ecc047b0b959fd44b989d23499e4e162, type: 2}
