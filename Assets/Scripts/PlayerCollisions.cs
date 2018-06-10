@@ -5,6 +5,13 @@ using UnityEngine;
 public class PlayerCollisions : MonoBehaviour
 {
 
+  void removeGameObjectFromScene(GameObject gObject)
+  {
+    GameObject physicsObjectController = GameObject.Find("GameController");
+    physicsObjectController.GetComponent<PhysicsObjectController>().PhysicsObjects.Remove(gObject);
+    Destroy(gObject);
+  }
+
   void handleAsteroidCollision(Collision collision)
   {
     // Swallow asteroid if smaller than player
@@ -17,16 +24,14 @@ public class PlayerCollisions : MonoBehaviour
       GetComponent<Rigidbody>().mass += collision.gameObject.GetComponent<Rigidbody>().mass;
 
       // Kill the asteroid!
-      GameObject physicsObjectController = GameObject.Find("GameController");
-      physicsObjectController.GetComponent<PhysicsObjectController>().PhysicsObjects.Remove(collision.gameObject);
-      Destroy(collision.gameObject);
+      removeGameObjectFromScene(collision.gameObject);
     }
   }
 
-    void HandleBlackHoleCollision(Collision collision)
-    {
-        Destroy(gameObject);
-    }
+  void HandleBlackHoleCollision(Collision collision)
+  {
+    removeGameObjectFromScene(collision.gameObject);
+  }
 
   void OnCollisionEnter(Collision collision)
   {
