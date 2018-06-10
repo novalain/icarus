@@ -334,12 +334,17 @@ Prefab:
     - target: {fileID: 114031075778494016, guid: f4a4fa5d973fdfd4da05efdf27535d02,
         type: 2}
       propertyPath: MaxRadius
-      value: 2
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114491249691599522, guid: f4a4fa5d973fdfd4da05efdf27535d02,
         type: 2}
       propertyPath: AsteroidSpawningDelay
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114031075778494016, guid: f4a4fa5d973fdfd4da05efdf27535d02,
+        type: 2}
+      propertyPath: MinRadius
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f4a4fa5d973fdfd4da05efdf27535d02, type: 2}

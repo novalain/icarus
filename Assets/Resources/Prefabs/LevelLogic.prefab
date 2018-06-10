@@ -348,8 +348,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Asteroid: {fileID: 1458273446385914, guid: 6b2e8915fece095479fee88a8ee626e8, type: 2}
   SpawnRadius: 30
-  MinRadius: 0.25
-  MaxRadius: 2
+  MinRadius: 15
+  MaxRadius: 100
+  MassCoefficient: 0.5
   InitialSpreadAngle: 90
   MinStartVelocity: 0.1
   MaxStartVelocity: 5
@@ -376,7 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aaa674b40c1fcd42af687bafbede727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AsteroidSpawningDelay: 5
+  AsteroidSpawningDelay: 1
 --- !u!114 &114935289847259056
 MonoBehaviour:
   m_ObjectHideFlags: 1
