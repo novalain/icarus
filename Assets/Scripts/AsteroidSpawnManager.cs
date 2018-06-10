@@ -28,7 +28,7 @@ public class AsteroidSpawnManager : MonoBehaviour {
     
     // Geometrical size
     float asteroidSize = Random.Range(MinRadius, MaxRadius);
-    newAsteroidObj.transform.localScale = new Vector3(asteroidSize, asteroidSize, asteroidSize);
+    //newAsteroidObj.transform.localScale = new Vector3(asteroidSize, asteroidSize, asteroidSize);
     
     newAsteroidObj.gameObject.GetComponent<Rigidbody>().mass = asteroidSize * MassCoefficient;
 
