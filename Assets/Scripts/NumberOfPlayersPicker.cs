@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class NumberOfPlayersPicker : MonoBehaviour {
-    public int numberOfPlayers = 2;
+    public int numberOfPlayers = 4;
     public Button morePlayersButton;
     public Button lessPlayersButton;
     public Text numberOfPlayersText;
