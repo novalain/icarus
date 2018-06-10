@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnPlayersManager : MonoBehaviour {
+    public bool spawnSun = true;
+
 	private static readonly Color[] PLAYER_COLORS = { Color.red, Color.green, Color.blue, Color.yellow };
 
 	// Use this for initialization
@@ -12,15 +14,18 @@ public class SpawnPlayersManager : MonoBehaviour {
         GameObject spawnPoints = GameObject.Find("SpawnPoints");
         if (spawnPoints == null) Debug.LogError("You need to add the spawnpoints prefab to the scene");
 
-		// Instanciate Sun
-		GameObject sunPrefab = (GameObject)Resources.Load("Prefabs/Planet", typeof(GameObject));		
-		GameObject sunObject = Instantiate(sunPrefab, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
-		sunObject.name = "Sun";
+        PhysicsObjectController physicsObjectController = GetComponent<PhysicsObjectController>();
+        // Instanciate Sun
+        if (spawnSun)
+        {
+            GameObject sunPrefab = (GameObject)Resources.Load("Prefabs/Planet", typeof(GameObject));
+            GameObject sunObject = Instantiate(sunPrefab, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
+            sunObject.name = "Sun";
+        
+		    physicsObjectController.PhysicsObjects.Add(sunObject);
+        }
 
-		PhysicsObjectController physicsObjectController = GetComponent<PhysicsObjectController>();
-		physicsObjectController.PhysicsObjects.Add(sunObject);
-
-		for (int i = 0; i < GlobalData.numPlayers; ++i) {
+        for (int i = 0; i < GlobalData.numPlayers; ++i) {
             // Spawn point data
             Transform spawnPoint = spawnPoints.transform.GetChild(i);          
             Vector3 initialVelocity = spawnPoint.GetComponent<SpawnPointData>().initalVelocity;
