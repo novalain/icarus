@@ -47,14 +47,26 @@ public class Physics : MonoBehaviour {
     float radius = Mathf.Pow( volume * 3.0f / (4.0f * Mathf.PI), 1.0f / 3.0f);
     transform.localScale = new Vector3(radius, radius, radius);
 
+    bool isPlayer = gameObject.tag == "Player";
+
+
     foreach (GameObject planet in _physicsObjectController.PhysicsObjects)
         {
             if (GameObject.ReferenceEquals(gameObject, planet)) continue;
             Rigidbody ohterRigidbody = planet.GetComponent<Rigidbody>();
 
-           
-          
-            float force = _rigidbody.mass * ohterRigidbody.mass / Mathf.Pow(Vector3.Distance(transform.position, planet.transform.position), 2);
+            bool otherIsPlayer = planet.tag == "Player";
+
+      float force;
+      if (isPlayer && otherIsPlayer)
+      {
+        force = Mathf.Pow(Mathf.Min(_rigidbody.mass, ohterRigidbody.mass),2) / Mathf.Pow(Vector3.Distance(transform.position, planet.transform.position), 2);
+
+      }
+      else
+      {
+            force = _rigidbody.mass * ohterRigidbody.mass / Mathf.Pow(Vector3.Distance(transform.position, planet.transform.position), 2);
+      }
             Vector3 forceVec =  (planet.transform.position - transform.position).normalized * force;
             _rigidbody.AddForce(forceVec);
         }
