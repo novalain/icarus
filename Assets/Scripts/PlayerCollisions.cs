@@ -30,7 +30,7 @@ public class PlayerCollisions : MonoBehaviour
 
   void HandleBlackHoleCollision(Collision collision)
   {
-    removeGameObjectFromScene(collision.gameObject);
+    removeGameObjectFromScene(gameObject); // remove this player
   }
 
   void OnCollisionEnter(Collision collision)
