@@ -18,7 +18,7 @@ public class PlayerCollisions : MonoBehaviour
     if (transform.localScale.x > collision.gameObject.transform.localScale.x)
     {
       // Grow radius (currently by adding 10% of the swallowed objects radius) TODO: new logic PLEASEEE!!!
-      transform.localScale *= 1 + 0.1F * collision.gameObject.transform.localScale.x;
+      //transform.localScale += 0.1F * collision.gameObject.transform.localScale.x;
 
       // Add mass
       GetComponent<Rigidbody>().mass += collision.gameObject.GetComponent<Rigidbody>().mass;
