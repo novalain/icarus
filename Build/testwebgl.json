@@ -1,0 +1,13 @@
+{
+"companyName": "player1",
+"productName": "Icarus",
+"dataUrl": "testwebgl.data.unityweb",
+"asmCodeUrl": "testwebgl.asm.code.unityweb",
+"asmMemoryUrl": "testwebgl.asm.memory.unityweb",
+"asmFrameworkUrl": "testwebgl.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
