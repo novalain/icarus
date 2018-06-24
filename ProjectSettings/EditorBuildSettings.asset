@@ -6,7 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Multiplayer/MultiplayerLobby.unity
+    path: Assets/Scenes/Multiplayer/MainMenuSceneOnline.unity
+    guid: 57cd2a9a7f46531499b8b44bc7a85c32
+  - enabled: 1
+    path: Assets/Scenes/Multiplayer/OnlineLobby.unity
     guid: 2c4bbc219ddc60146b4bb4c01a9f2a1e
   - enabled: 1
     path: Assets/Scenes/MainMenuScene.unity
@@ -26,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ControllerFindScene.unity
     guid: 64d62dab0ebdaa949a2f8b9469de0ef4
+  - enabled: 1
+    path: Assets/Scenes/Multiplayer/OnlineLevel2.unity
+    guid: 7b3627ba25654314badedb8a39a0e84e
   m_configObjects: {}

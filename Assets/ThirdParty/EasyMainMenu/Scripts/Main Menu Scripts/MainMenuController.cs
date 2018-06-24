@@ -13,6 +13,7 @@ public class MainMenuController : MonoBehaviour {
     [Header("Options Panel")]
     public GameObject MainOptionsPanel;
     public GameObject StartGameOptionsPanel;
+    public GameObject OnlineOptionsPanel;
     public GameObject GamePanel;
     public GameObject ControlsPanel;
     public GameObject GfxPanel;
@@ -43,6 +44,26 @@ public class MainMenuController : MonoBehaviour {
         //enable BLUR
         //Camera.main.GetComponent<Animator>().Play("BlurOn");
        
+    }
+
+    public void openOnlineOptions()
+    {
+        //enable respective panel
+        OnlineOptionsPanel.SetActive(true);
+        StartGameOptionsPanel.SetActive(false);
+
+        GameObject.Find("Network Manager").GetComponent<MenuMatchMaker>().findMatches();
+
+
+        //play anim for opening main options panel
+        anim.Play("buttonTweenAnims_on");
+
+        //play click sfx
+        playClickSound();
+
+        //enable BLUR
+        //Camera.main.GetComponent<Animator>().Play("BlurOn");
+
     }
 
     public void openStartGameOptions()
